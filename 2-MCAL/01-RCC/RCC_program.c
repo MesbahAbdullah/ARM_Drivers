@@ -12,7 +12,7 @@
 #include "RCC_private.h"
 #include "RCC_config.h"
 
-/* choose clock source */
+/* choose clock source  */
 void RCC_voidInitSysClock()
 {
 #if RCC_CLOCK_TYPE == RCC_HSE_CRYSTAL
