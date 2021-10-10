@@ -12,7 +12,7 @@
 #include "RCC_private.h"
 #include "RCC_config.h"
 
-/* choose clock source  */
+/* choose clock source */
 void RCC_voidInitSysClock()
 {
 #if RCC_CLOCK_TYPE == RCC_HSE_CRYSTAL
@@ -66,6 +66,7 @@ void RCC_voidInitSysClock()
 #error("you choses wrong clock type")
 #endif
 }
+
 /* Ebable RCC for peripheral */
 void RCC_voidEnableClock(u8 Copy_u8BusName, u8 Copy_u8PerName)
 {
@@ -92,6 +93,7 @@ void RCC_voidEnableClock(u8 Copy_u8BusName, u8 Copy_u8PerName)
         /* Return Error */
     }
 }
+
 /* disable the rcc for per */
 void RCC_voidDisableClock(u8 Copy_u8BusName, u8 Copy_u8PerName)
 {
