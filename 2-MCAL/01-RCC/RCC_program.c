@@ -94,7 +94,7 @@ void RCC_voidEnableClock(u8 Copy_u8BusName, u8 Copy_u8PerName)
     }
 }
 
-/* disable the rcc for per */
+/* disable the RCC for per */
 void RCC_voidDisableClock(u8 Copy_u8BusName, u8 Copy_u8PerName)
 {
     if (Copy_u8PerName <= 31)
