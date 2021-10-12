@@ -2,7 +2,7 @@
 /* Author      : Mesbah Abdullah                         */
 /* Date        : 29 Jul 2020                             */
 /* Version     : V01                                     */
-/* Brief       : STD Types Math library                  */
+/* Brief       : STD Types library                       */
 /*********************************************************/
 
 #ifndef STD_TYPES_H
