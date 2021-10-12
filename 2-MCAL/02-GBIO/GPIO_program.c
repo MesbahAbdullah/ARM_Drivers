@@ -10,7 +10,6 @@
 
 #include "GPIO_interface.h"
 #include "GPIO_private.h"
-#include "GPIO_config.h"
 
 void MGPIO_voidSetPinDirection(u8 Copy_u8Port, u8 Copy_u8Pin, u8 u8Copy_u8Mode)
 {
@@ -129,6 +128,7 @@ void MGPIO_voidSetPinValue(u8 Copy_u8Port, u8 Copy_u8Pin, u8 u8Copy_u8Value)
 		break;
 	}
 }
+
 /* getting the value of a bin in a port */
 u8 MGPIO_u8GetPinValue(u8 Copy_u8Port, u8 Copy_u8Pin)
 {
