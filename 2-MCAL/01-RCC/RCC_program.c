@@ -25,7 +25,7 @@ void RCC_voidInitSysClock()
     SET_BIT(RCC_CFGR, 0); /* choose HSE as a System clock */
     CLR_BIT(RCC_CFGR, 1);
 #elif RCC_CLOCK_TYPE == RCC_HSI
-    SET_BIT(RCC_CR, 1);   /* Enable HSI no trimming       */
+    SET_BIT(RCC_CR, 0);   /* Enable HSI no trimming       */
     CLR_BIT(RCC_CFGR, 0); /* choose HSI as a System clock */
     CLR_BIT(RCC_CFGR, 1); /* choose HSI as a System clock */
 #elif RCC_CLOCK_TYPE == RCC_PLL

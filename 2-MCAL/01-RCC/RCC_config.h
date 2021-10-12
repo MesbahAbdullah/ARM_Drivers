@@ -14,7 +14,7 @@
 /*3-RCC_HSI                                              */
 /*4-RCC_PLL                                              */
 /*********************************************************/
-#define RCC_CLOCK_TYPE      RCC_HSE_RC
+#define RCC_CLOCK_TYPE      RCC_HSI
 
 #if RCC_CLOCK_TYPE == RCC_PLL
 
