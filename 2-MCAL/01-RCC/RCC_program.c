@@ -18,18 +18,20 @@ void RCC_voidInitSysClock()
 #if RCC_CLOCK_TYPE == RCC_HSE_CRYSTAL
     SET_BIT(RCC_CR, 16);  /* Enaple HSE crystal mode      */
     SET_BIT(RCC_CFGR, 0); /* choose HSE as a System clock */
-    CLR_BIT(RCC_CFGR, 1);
+    CLR_BIT(RCC_CFGR, 1); /* choose HSE as a System clock */
+
 #elif RCC_CLOCK_TYPE == RCC_HSE_RC
     SET_BIT(RCC_CR, 18);  /* oscillator bypassed          */
     SET_BIT(RCC_CR, 16);  /* Enaple HSE RC mode           */
     SET_BIT(RCC_CFGR, 0); /* choose HSE as a System clock */
-    CLR_BIT(RCC_CFGR, 1);
+    CLR_BIT(RCC_CFGR, 1); /* choose HSE as a System clock */
+
 #elif RCC_CLOCK_TYPE == RCC_HSI
     SET_BIT(RCC_CR, 0);   /* Enable HSI no trimming       */
     CLR_BIT(RCC_CFGR, 0); /* choose HSI as a System clock */
     CLR_BIT(RCC_CFGR, 1); /* choose HSI as a System clock */
-#elif RCC_CLOCK_TYPE == RCC_PLL
 
+#elif RCC_CLOCK_TYPE == RCC_PLL
     /* mul value */
     RCC_CFGR &= ~((0b1111) << 18);
     RCC_CFGR |= (RCC_PLL_MUL_VAL) << 18;
@@ -94,7 +96,7 @@ void RCC_voidEnableClock(u8 Copy_u8BusName, u8 Copy_u8PerName)
     }
 }
 
-/* disable the RCC for per */
+/* disable the RCC for peripheral */
 void RCC_voidDisableClock(u8 Copy_u8BusName, u8 Copy_u8PerName)
 {
     if (Copy_u8PerName <= 31)
