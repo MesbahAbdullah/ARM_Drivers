@@ -35,7 +35,6 @@
 #define RCC_PLL_IN_HSE_RC               4
 
 /* PLL MUL VAL*/
-
 #define PLL_CLOCK_MUL_BY_2                        0b0000
 #define PLL_CLOCK_MUL_BY_3					      0b0001
 #define PLL_CLOCK_MUL_BY_4                        0b0010
