@@ -24,10 +24,15 @@
 #define NVIC_ICPR0 *((volatile u32 *)0xE000E280) /* remove the pending state from interrupts 0 to 31  */
 #define NVIC_ICPR1 *((volatile u32 *)0xE000E284) /* remove the pending state from interrupts 32 to 63 */
 
-/* Interrupt active bit registers */
+/* Interrupt active bit registers (read only) */
 #define NVIC_IABR0 *((volatile u32 *)0xE000E300)
 #define NVIC_IABR1 *((volatile u32 *)0xE000E304)
 
+/* Interrupt priority registers */
+#define NVIC_IPR   ((volatile u8 *)0xE000E400)
 
+/* System control block peripheral                  */
+/* Application interrupt and reset control register */
+#define SCB_AIRCR  *((volatile u32 *)0xE000ED0C)
 
 #endif

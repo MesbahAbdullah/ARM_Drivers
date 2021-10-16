@@ -98,3 +98,13 @@ u8 MNVIC_u8GetActiveFlag(u8 Copy_u8IntNumber)
     }
     return Local_u8Result;
 }
+
+void MNVIC_voidSetPriority(s8 Copy_s8IntID, u8 Copy_u8GroupPriority, u8 Copy_u8SupPriority)
+{
+    /* is it core peripheral */
+    /* is it external peripheral */
+    if (Copy_s8IntID >= 0)
+    {
+
+    }
+}
