@@ -99,12 +99,16 @@ u8 MNVIC_u8GetActiveFlag(u8 Copy_u8IntNumber)
     return Local_u8Result;
 }
 
-void MNVIC_voidSetPriority(s8 Copy_s8IntID, u8 Copy_u8GroupPriority, u8 Copy_u8SupPriority)
+void MNVIC_voidSetPriority(s8 Copy_s8IntID, u8 Copy_u8GroupPriority, u8 Copy_u8SupPriority, u32 Copy_u32Group)
 {
+    /* getting the value of the high part of the 8 bits in IPR register */
+    u8 Local_u8Priority = Copy_u8SupPriority | Copy_u8GroupPriority << ((Copy_u32Group - 0X05FA0300) / 265);
     /* is it core peripheral */
     /* is it external peripheral */
     if (Copy_s8IntID >= 0)
     {
-
+        NVIC_IPR[Copy_s8IntID] = Local_u8Priority << 4;
     }
+    /* setting the lock */
+    SCB_AIRCR = Copy_u32Group;
 }

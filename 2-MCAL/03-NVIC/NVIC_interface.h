@@ -28,4 +28,7 @@ void MNVIC_voidSetPendingFlag  (u8 Copy_u8IntNumber);
 void MNVIC_voidClearPendingFlag(u8 Copy_u8IntNumber);
 
 u8 MNVIC_u8GetActiveFlag       (u8 Copy_u8IntNumber);
+
+void MNVIC_voidSetPriority(s8 Copy_s8IntID, u8 Copy_u8GroupPriority, u8 Copy_u8SupPriority, u32 Copy_u32Group);
+
 #endif
